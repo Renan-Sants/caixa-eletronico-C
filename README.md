@@ -1,21 +1,27 @@
-# Caixa Eletrônico em C
+# Caixa Eletronico em C
 
-Projeto desenvolvido durante meus estudos de programação em C.
+Projeto desenvolvido durante meus estudos de programacao em C na UNICID.
 
-## Versões
+## Versoes
 
 ### V1.0
-Primeira versão desenvolvida como atividade acadêmica.
-Implementa:
-- Validação do saque
-- Verificação de saldo
-- Distribuição das cédulas
+Primeira versao desenvolvida como atividade academica.
+- Validacao do saque
+- Verificacao de saldo
+- Distribuicao das cedulas
 
 ### V2.0
-Evolução do projeto com:
+Segunda versao desenvolvida a partir da V1, por interesse em continuar o projeto.
 - Interface de terminal
 - Menu interativo
 - Consulta de saldo
 - Saque
-- Depósito
-- Extrato
+- Deposito
+- Extrato das operacoes
+- Controle de ate 100 operacoes
+- Calculo das cedulas no saque
+
+## Estrutura
+
+V1/ -> primeira versao da atividade
+V2/ -> segunda versao, desenvolvida em cima da V1

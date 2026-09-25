@@ -1,0 +1,34 @@
+ALGORITMO CaixaEletronico_V1
+
+VARIAVEIS
+    saldoDisponivel <- 1000.00
+    valorSaque, valorRestante <- INTEIRO
+    notas100, notas50, notas20, notas10, notas5 <- INTEIRO
+
+INICIO
+    ESCREVA "Digite o valor do saque:"
+    LEIA valorSaque
+
+    SE valorSaque <= 0 OU valorSaque > saldoDisponivel
+       OU valorSaque MOD 5 <> 0 ENTAO
+        ESCREVA "Erro: Valor invalido ou saldo insuficiente."
+    SENAO
+        valorRestante <- valorSaque
+
+        notas100 <- valorRestante DIV 100
+        valorRestante <- valorRestante MOD 100
+
+        notas50 <- valorRestante DIV 50
+        valorRestante <- valorRestante MOD 50
+
+        notas20 <- valorRestante DIV 20
+        valorRestante <- valorRestante MOD 20
+
+        notas10 <- valorRestante DIV 10
+        valorRestante <- valorRestante MOD 10
+
+        notas5 <- valorRestante DIV 5
+
+        ESCREVA as notas entregues
+    FIMSE
+FIM
