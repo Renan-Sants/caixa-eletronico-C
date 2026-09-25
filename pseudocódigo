@@ -1,0 +1,58 @@
+ALGORITMO CaixaEletronico
+
+VARIAVEIS
+    saldoDisponivel: REAL <- 1000.00
+    valorSaque, valorRestante: INTEIRO
+    notas100, notas50, notas20, notas10, notas5: INTEIRO
+
+INICIO
+
+    ESCREVA "Digite o valor que deseja sacar: "
+    LEIA valorSaque
+
+    SE (valorSaque % 5 != 0) OU (valorSaque > saldoDisponivel) OU (valorSaque <= 0) ENTAO
+        ESCREVA "Erro: saldo insuficiente."
+
+    SENAO
+
+        valorRestante <- valorSaque
+
+        notas100 <- valorRestante / 100
+        valorRestante <- valorRestante % 100
+
+        notas50 <- valorRestante / 50
+        valorRestante <- valorRestante % 50
+
+        notas20 <- valorRestante / 20
+        valorRestante <- valorRestante % 20
+
+        notas10 <- valorRestante / 10
+        valorRestante <- valorRestante % 10
+
+        notas5 <- valorRestante / 5
+
+        ESCREVA "Notas entregues:"
+
+        SE notas100 > 0 ENTAO
+            ESCREVA notas100, " nota(s) de 100"
+        FIM_SE
+
+        SE notas50 > 0 ENTAO
+            ESCREVA notas50, " nota(s) de 50"
+        FIM_SE
+
+        SE notas20 > 0 ENTAO
+            ESCREVA notas20, " nota(s) de 20"
+        FIM_SE
+
+        SE notas10 > 0 ENTAO
+            ESCREVA notas10, " nota(s) de 10"
+        FIM_SE
+
+        SE notas5 > 0 ENTAO
+            ESCREVA notas5, " nota(s) de 5"
+        FIM_SE
+
+    FIM_SE
+
+FIMALGORITMO
